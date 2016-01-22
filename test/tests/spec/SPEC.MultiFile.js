@@ -15,7 +15,7 @@
     var
       path = require('path'),
       fse = require('graceful-fs-extra'),
-      filePath = path.resolve('someTempDir'),
+      filesDir = path.resolve('someTempDir'),
       NOT_FOUND_CODE = 404,
       id,
       item = {param: 'blah'},
@@ -24,8 +24,15 @@
       persistor;
 
     beforeEach(function () {
-      persistor = new Persistor({dir: filePath});
+      persistor = new Persistor({dir: filesDir});
       resourceContents = undefined;
+    });
+
+    after(function (done) {
+      fse.remove(filesDir, function (err) {
+        should.not.exist(err);
+        done();
+      });
     });
 
     describe('Instantiation', function () {
