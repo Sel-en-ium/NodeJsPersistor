@@ -1,0 +1,26 @@
+{
+  "name": "sel-en-ium-persistor",
+  "version": "0.0.1",
+  "description": "Based on https://github.com/Glazr/glazr-persistor. Persistor which supports localFile, Multifile, Ldap, Yaml(SingleFile) persistence.",
+  "main": "interface.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sel-en-ium/NodeJsPersistor.git"
+  },
+  "keywords": [
+    "glazr",
+    "persistor"
+  ],
+  "author": "glazr",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "sel-en-ium-uility": "Sel-en-ium/NodeJsUtility",
+    "graceful-fs-extra": "^1.0.6",
+    "path": "^0.11.14"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.4",
+    "sinon": "^1.16.1"
+  }
+}
